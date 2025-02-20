@@ -7,10 +7,11 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+       "backgroundColor": "#fff",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+     "backgroundColor": "#fff"
     },
     "ios": {
       "supportsTablet": true
@@ -18,11 +19,12 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+          "backgroundColor": "#fff"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
     }
+ 
   }
 }
