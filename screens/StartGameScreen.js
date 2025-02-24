@@ -1,11 +1,16 @@
 import {
     TextInput,
     View,
+    Text,
     StyleSheet,
     Alert
 } from "react-native"
 import { useState } from "react"
-import PrimaryButton from "../components/PrimaryButton"
+import PrimaryButton from "../components/ui/PrimaryButton"
+import Colors from "../constants/colors"
+import Title from "../components/ui/Title"
+import Card from "../components/ui/Card"
+import InctructionText from "../components/ui/InstructionText"
 
 function StartGameScreen({onPickNumber}) {
     const [enteredNumber, setEnteredNumber] = useState('')
@@ -29,7 +34,12 @@ function StartGameScreen({onPickNumber}) {
 
 
 
-    return <View style={styles.inputConteiner}>
+    return <View style={styles.rootContainer}>
+        <Title>Guess my Number</Title>
+
+    <Card>
+        <InctructionText>Enter a number</InctructionText>
+     
         <TextInput
             style={styles.numberInput}
             maxLength={2}
@@ -49,33 +59,26 @@ function StartGameScreen({onPickNumber}) {
 
         </View>
 
+    </Card>
     </View>
 }
 export default StartGameScreen
 
 const styles = StyleSheet.create({
-    inputConteiner: {
-        marginHorizontal: 24,
-        justifyContent: 'center',
-        alignItems: "center",
-        borderRadius: 8,
-        padding: 16,
-        marginTop: 100,
-        backgroundColor: '#3b021f',
-        elevation: 4,
-        shadowColor: 'black',
-        shadowOffset: { width: 0, height: 2 },
-        shadowRadius: 6,
-        shadowOpacity: .25
+    rootContainer:{
+        flex:1,
+        marginTop:100,
+        alignItems:'center'
     },
+   
     numberInput: {
         height: 50,
         width: 50,
         textAlign: 'center',
         fontSize: 32,
-        borderBottomColor: '#ddb52f',
+        borderBottomColor: Colors.accent500,
         borderBottomWidth: 2,
-        color: '#ddb52f',
+        color: Colors.accent500,
         marginVertical: 8,
         fontWeight: 'bold'
 
@@ -85,5 +88,6 @@ const styles = StyleSheet.create({
     },
     buttonContainer:{
         flex:1
-    }
+    },
+   
 })
