@@ -9,6 +9,7 @@ export default InctructionText
 
 const styles = StyleSheet.create({ 
     instactionText:{
+        fontFamily:'open-sans',
     color: Colors.accent500,
     fontSize:24
 }

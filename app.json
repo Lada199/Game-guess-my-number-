@@ -7,11 +7,11 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
-       "backgroundColor": "#fff",
+    "backgroundColor": "#fff",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-     "backgroundColor": "#fff"
+      "backgroundColor": "#fff"
     },
     "ios": {
       "supportsTablet": true
@@ -19,12 +19,14 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-          "backgroundColor": "#fff"
+        "backgroundColor": "#fff"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
- 
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }
